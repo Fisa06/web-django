@@ -1,0 +1,12 @@
+<header>
+  <h1>Vítejte na mé osobní stránce!</h1>
+    <h3>{{ actual_date|date:"D. M. Y" }}</h3>
+  <nav>
+    <ul>
+      <li><a href="#home">Domů</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="{% url "about" %}">O mně</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>

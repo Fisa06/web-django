@@ -2,14 +2,15 @@ from datetime import datetime
 
 from django.views.generic import TemplateView
 
-
-class HomePageView(TemplateView):
-    template_name = 'home.html'
-
+class BasePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['actual_date'] = datetime.now()
-        print(context)
         return context
-class AboutPageView(TemplateView):
+
+class HomePageView(BasePageView):
+    template_name = 'home.html'
+
+
+class AboutPageView(BasePageView):
     template_name = 'about.html'
