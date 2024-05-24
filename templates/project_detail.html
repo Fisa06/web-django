@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    {% if project %}
+        Tohle je detail projektu s ID {{ project.id }}.
+    {% else %}
+        Tento projekt neexistuje.
+    {% endif %}
+
+{% endblock %}

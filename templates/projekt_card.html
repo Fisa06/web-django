@@ -1,0 +1,13 @@
+<div class="project">
+    <h3>{{ projekt.name }}</h3>
+    <div class="d-flex">
+        <div>
+            <img src="{{ projekt.logo }}" alt="{{ projekt.name }}" loading="lazy">
+        </div>
+        <div>
+            {% if projekt.url %}
+                <a href="{{ projekt.url }}" target="_blank">Odkaz na projekt</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -44,10 +44,6 @@ footer {
     color: #fff;
 }
 
-.d-flex {
-    display: flex;
-}
-
 .home-text {
   width: 85%;
 }
@@ -55,4 +51,54 @@ footer {
 .home-img {
   position: relative;
   top: 4rem;
+}
+.project {
+    border: 1px solid #8e8181;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    min-width: 335px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.d-flex div {
+    margin: 8px;
+}
+
+.project img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.project a:hover {
+    background-color: #0056b3;
 }
