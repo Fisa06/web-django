@@ -20,6 +20,7 @@ from django.urls import path, include
 from osobni_stranka.views import HomePageView, AboutPageView
 
 urlpatterns = [
+    path('admin/', include('loginas.urls')),
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
     path('o-me/', AboutPageView.as_view(), name='about'),

@@ -14,7 +14,7 @@ class TypeProject(models.Model):
     name = models.CharField(max_length=100,
                             verbose_name='Name',
                             unique=True)
-    description = models.TextField(max_length=1000,null=True, blank=True)
+    description = models.TextField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}"
@@ -23,11 +23,12 @@ class TypeProject(models.Model):
         verbose_name = 'Typ Projektu'
         verbose_name_plural = 'Typy Projektu'
 
+
 class TypeUrl(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100,
-                             verbose_name='Name',
-                             unique=True)
+                            verbose_name='Name',
+                            unique=True)
     icon = models.ImageField(upload_to='static/images/icons/', verbose_name='Icon')
 
     def __str__(self):
@@ -66,8 +67,8 @@ class TypeTag(models.Model):
     def __str__(self):
         return f"{self.name} - {self.color}"
 
-class Project(models.Model):
 
+class Project(models.Model):
     objects = ProjectManager()
 
     id = models.AutoField(primary_key=True)
@@ -99,10 +100,15 @@ class Project(models.Model):
         from markdownx.utils import markdownify
         return markdownify(self.description)
 
-
     class Meta:
         verbose_name = 'Projekt'
         verbose_name_plural = 'Projekty'
 
     def __str__(self):
         return f"{self.name}"
+
+
+class ContactMe(models.Model):
+    id = models.AutoField(primary_key=True)
+    text = models.CharField(max_length=1000, verbose_name='Text')
+    email = models.EmailField(max_length=100, verbose_name='Email')
